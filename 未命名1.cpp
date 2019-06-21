@@ -23,4 +23,29 @@ int main()
     else
     {
         ch=fgetc(fp);
+    }
+    ch=fgetc(fp);
+
+	while(ch!=EOF)
+	{
+		if(i==0)
+		{
+			if(ch=='\n')
+			++i;
+		}
+    if(i!=0)
+    {
+	    if(l==0)
+		{
+	        if(ch==',')
+	        { 
+	    l++;
+	    numbers[i-1][m+1]='\0';
+	    m=0;
+	    ch=fgetc(fp);
+	    continue;
+	        }
+	    }
 	} 
+	    
+ 
