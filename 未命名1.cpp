@@ -33,19 +33,19 @@ int main()
 			if(ch=='\n')
 			++i;
 		}
-    if(i!=0)
-    {
-	    if(l==0)
-		{
-	        if(ch==',')
-	        { 
-	    l++;
-	    numbers[i-1][m+1]='\0';
-	    m=0;
-	    ch=fgetc(fp);
-	    continue;
-	        }
-	    }
-	} 
+    num[i-1][l-6][m]=ch;
+
+	num[i-1][l-6][m+1]='\0';
+	average[i-1]+=atof(num[i-1][l-6]);
+	
+	if(max<atoi(num[i-1][l-6]))
+	    max=atoi(num[i-1][l-6]);
+	if(min>atoi(num[i-1][l-6]))
+	    min=atoi(num[i-1][l-6]);
+	average[i-1]=(average[i-1]-max-min)/(l-7);
+	    fclose(fp);
+	
+return 0;
+}
 	    
  
