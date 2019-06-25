@@ -33,8 +33,20 @@ int main()
 			if(ch=='\n')
 			++i;
 		}
-    num[i-1][l-6][m]=ch;
-
+	if(i!=0){
+	  if(l==0){
+	     if(ch==',')
+		 {
+		   l++;
+		   numbers[i-1][m+1]='\0';
+		   m=0;
+		   ch=fgetc(fp);
+		   continue;
+		 }
+		 numbers[i-1][m]=ch;
+		 m++; 
+		}
+	}
 	num[i-1][l-6][m+1]='\0';
 	average[i-1]+=atof(num[i-1][l-6]);
 	
