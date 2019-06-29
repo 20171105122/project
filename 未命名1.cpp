@@ -46,7 +46,73 @@ int main()
 		 numbers[i-1][m]=ch;
 		 m++; 
 		}
+		else if(l==1)
+		{
+		  if(ch==',')
+		  {
+		    l++;
+			name[i-1][m+1]='\0';
+			m=0;
+			ch=fgetc(fp);
+			continue;
+		  }
+		  name[i-1][m]=ch;
+		  m++;
+		}
+        else if(l==2)
+		{
+		  if(ch==',')
+		  {
+		    l++;
+			sex[i-1][m+1]='\0';
+			m=0;
+			ch=fgetc(fp);
+			continue;
+		  }
+		  sex[i-1][m]=ch;
+		  m++;
+		}
+		else if(l==3)
+		{
+		  if(ch==',')
+		  {
+		    l++;
+			birthofdate[i-1][m+1]='\0';
+			m=0;
+			ch=fgetc(fp);
+			continue;
+		  }
+		  birthofdate[i-1][m]=ch;
+		  m++;
+		}
+		else if(l==4)
+		{
+		  if(ch==',')
+		  {
+		    l++;
+			cla[i-1][m]='\0';
+			m=0;
+			ch=fgetc(fp);
+			continue;
+		  }
+		  cla[i-1][m]=ch;
+		  m++;
+		}
+		else if(l==5)
+		{
+		  if(ch==',')
+		  {
+		    l++;
+			phNO[i-1][m+1]='\0';
+			m=0;
+			ch=fgetc(fp);
+			continue;
+		  }
+		  phNO[i-1][m]=ch;
+		  m++;
+		}
 	}
+}
 	num[i-1][l-6][m+1]='\0';
 	average[i-1]+=atof(num[i-1][l-6]);
 	
