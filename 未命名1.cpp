@@ -127,8 +127,7 @@ int main()
 		{
 			num[i-1][l-6][m+1]='\0';
 			average[i-1]+=atof(num[i-1][l-6]);
-			if(max<atoi(num[i-1][l-6]))
-			    max=atoi(num[i-1][l-6]);
+			
 			    
 			if(min>atoi(num[i-1][l-6]))
 				min=atoi(num[i-1][l-6]);
@@ -138,6 +137,21 @@ int main()
 				continue;
         }
     } 
+    num[i-1][l-6][m]=ch;
+
+	m++;
+	if(ch=='\n')
+	{
+		num[i-1][l-6][m+1]='\0';
+		average[i-1]+=atof(num[i-1][l-6]);
+		
+		if(max<atoi(num[i-1][l-6]))
+		    max=atoi(num[i-1][l-6]);
+		
+		i++;l=0;m=0;
+	}
+		ch=fgetc(fp);
+
     return 0;
 }
 	    
