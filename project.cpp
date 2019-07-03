@@ -34,30 +34,31 @@ int main()
 			++i;
 		}
 	if(i!=0){
-	  if(l==0){
-	     if(ch==',')
-		 {
-		   l++;
-		   numbers[i-1][m+1]='\0';
-		   m=0;
-		   ch=fgetc(fp);
-		   continue;
-		 }
-		 numbers[i-1][m]=ch;
-		 m++; 
-		}
+	    if(l==0)
+		{
+	        if(ch==',')
+			{
+			   l++;
+			   numbers[i-1][m+1]='\0';
+			   m=0;
+			   ch=fgetc(fp);
+			   continue;
+			}
+		numbers[i-1][m]=ch;
+		m++; 
+	   }
 		else if(l==1)
 		{
-		  if(ch==',')
-		  {
-		    l++;
-			name[i-1][m+1]='\0';
-			m=0;
-			ch=fgetc(fp);
-			continue;
-		  }
-		  name[i-1][m]=ch;
-		  m++;
+		    if(ch==',')
+			{
+			    l++;
+				name[i-1][m+1]='\0';
+				m=0;
+				ch=fgetc(fp);
+				continue;
+			}
+			  name[i-1][m]=ch;
+			  m++;
 		}
         else if(l==2)
 		{
@@ -113,8 +114,6 @@ int main()
 		}
 	}
 }
-	num[i-1][l-6][m+1]='\0';
-	average[i-1]+=atof(num[i-1][l-6]);
 	
 	if(max<atoi(num[i-1][l-6]))
 	    max=atoi(num[i-1][l-6]);
@@ -127,8 +126,7 @@ int main()
 		{
 			num[i-1][l-6][m+1]='\0';
 			average[i-1]+=atof(num[i-1][l-6]);
-			
-			    
+		
 			if(min>atoi(num[i-1][l-6]))
 				min=atoi(num[i-1][l-6]);
 				l++;
@@ -149,8 +147,20 @@ int main()
 		    max=atoi(num[i-1][l-6]);
 		
 		i++;l=0;m=0;
-	}
 		ch=fgetc(fp);
+	}
+	
+    for(n=0;n<i;n++)
+    { 
+		printf("%s,%s,%s,%s,%s,%s,%.2lf\n",numbers[n],name[n],sex[n],birthofdate[n],cla[n],phNO[n],average[n]);
+		fp=fopen("/Users/s20171105112/biao.csv","w+");
+		fprintf(fp,"%s,%s,%s,%s,%s,%s,%s\n","nummbers","name","sex","dateofbirth","class","phoneNo","average");
+	} 
+	for(n=0;n<i;n++)
+	{ 
+		fprintf(fp,"%s,%s,%s,%s,%s,%s,%.2lf\n",numbers[n],name[n],sex[n],birthofdate[n],cla[n],phNO[n],average[n]);
+		fclose(fp);
+	} 
 
     return 0;
 }
