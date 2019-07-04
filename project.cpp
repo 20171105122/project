@@ -15,7 +15,7 @@ int main()
     int i=0,l=0,m=0,n; 
     int max=0,min=101;
     
-    fp=fopen("/Users/hp/Desktop/project/studentdata.txt","r");
+    fp=fopen("C:/Users/hp/Desktop/project/studentdata.txt","r");
     
     if(fp==NULL)
     {
@@ -165,7 +165,7 @@ int main()
 	    { 
 			printf("%s,%s,%s,%s,%s,%s,%.2lf\n",numbers[n],name[n],sex[n],birthofdate[n],cla[n],phNO[n],average[n]);
 	    }
-		fp=fopen("Users\hp\Desktop\project/biao.csv","w+");
+		fp=fopen("C:/Users/hp/Desktop/project/biao.csv","w+");
 		fprintf(fp,"%s,%s,%s,%s,%s,%s,%s\n","nummbers","name","sex","dateofbirth","class","phoneNo","average");
 		 
 		for(n=0;n<i;n++)
