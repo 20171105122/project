@@ -165,7 +165,7 @@ int main()
 	    { 
 			printf("%s,%s,%s,%s,%s,%s,%.2lf\n",numbers[n],name[n],sex[n],birthofdate[n],cla[n],phNO[n],average[n]);
 	    }
-		fp=fopen("/Users/s20171105112/biao.csv","w+");
+		fp=fopen("Users\hp\Desktop\project/biao.csv","w+");
 		fprintf(fp,"%s,%s,%s,%s,%s,%s,%s\n","nummbers","name","sex","dateofbirth","class","phoneNo","average");
 		 
 		for(n=0;n<i;n++)
