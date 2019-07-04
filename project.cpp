@@ -15,7 +15,7 @@ int main()
     int i=0,l=0,m=0,n; 
     int max=0,min=101;
     
-    fp=fopen("/Users/20171105122/Desktop/studentdata.csv","r");
+    fp=fopen("/Users/hp/Desktop/project/studentdata.txt","r");
     
     if(fp==NULL)
     {
