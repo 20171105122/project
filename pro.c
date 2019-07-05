@@ -24,7 +24,7 @@ int main()
  		double min=101,max=0,sum=0; 
 		fscanf(fs,"%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%s",&ST[i].name,&ST[i].numbers,&ST[i].sex,&ST[i].birthofdate,&ST[i].cla,&ST[i].phNO,&ST[i].judge[0],&ST[i].judge[1],&ST[i].judge[2],&ST[i].judge[3],&ST[i].judge[4]);
 		for(l=0;l<5;++l){
-			sum+=atof(ST[i].judge[l]);
+			sum+=atof(ST[i].judge[l]);   //atof把字符串转化为双精度浮点 
 			if(min>atof(ST[i].judge[l])) min=atof(ST[i].judge[l]);
 			if(max<atof(ST[i].judge[l])) max=atof(ST[i].judge[l]);
 		}
